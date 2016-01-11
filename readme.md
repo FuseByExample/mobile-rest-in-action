@@ -1,3 +1,19 @@
+# Feedhenry Mobile & JBoss Fuse Service
+
+The purpose of this demo is to develop a Mobile Application using the Ionic, Feedhenry & Cordova Hybrid HTML5 Frameworks calling the backend REST services designed for the JBoss Fuse Blog application
+developed [here](https://github.com/FuseByExample/rest-dsl-in-action). The application can run on an iOS/Android Mobile application.
+
+| <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-1.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-2.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-3.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-4.png" width="200"/>  |
+
+Remark : The application can be started in emulation mode with IoS but not yet with Android
+
+# Prerequisites
+
+* [Nodejs - v0.10.30](https://nodejs.org/en/) - `npm install -g npm@0.10.30`
+* [Grunt](http://gruntjs.com/)
+* [Ionic - 1.7.7](http://ionicframework.com/)
+* [Cordova - 5.4.1](https://github.com/apache/cordova-cli)
+
 # Installation of the project 
 
 * To run this project, open a unix/windows terminal and git clone the [project](https://github.com/cmoulliard/feedhenry-camel) or download the [code](https://github.com/cmoulliard/feedhenry-camel/archive/master.zip)  
