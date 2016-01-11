@@ -1,18 +1,3 @@
-# Feedhenry Mobile & JBoss Fuse Service
-
-The purpose of this demo is to develop a Mobile Application using the Ionic, Feedhenry & Cordova Hybrid HTML5 Frameworks calling the backend REST services designed for the JBoss Fuse Blog application
-developed [here](https://github.com/FuseByExample/rest-dsl-in-action). The application can run on an iOS/Android Mobile application.
-
-| <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-1.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-2.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-3.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-4.png" width="200"/>  |
-
-Remark : The application can be started in emulation mode with IoS but not yet with Android
-
-# Prerequisites
-
-* [Nodejs - v0.10.30](https://nodejs.org/en/)
-* [Ionic - 1.7.7](http://ionicframework.com/)
-* [Cordova - 5.4.1](https://github.com/apache/cordova-cli)
-
 # Installation of the project 
 
 * To run this project, open a unix/windows terminal and git clone the [project](https://github.com/cmoulliard/feedhenry-camel) or download the [code](https://github.com/cmoulliard/feedhenry-camel/archive/master.zip)  
@@ -22,11 +7,31 @@ Remark : The application can be started in emulation mode with IoS but not yet w
 
 ## Mobile client
 
-* Move to the `client-ionic` directory and execute these commands to install
-  the node javascript modules
-
+* Move to the `client-ionic` directory and execute these commands
+* Add the Cordova platform specific config files
+    
+```   
+    rm -rf resources/
+    rm -rf plugins
+    rm -rf platforms/
+    ionic hooks add
+    ionic platform add ios
+    ionic platform add browser
 ```
-    npm install
+    
+* Build HTML5 Mobile hybrid code 
+    
+```    
+    ionic build ios
+    ionic build browser
+```
+    
+* Run the nodejs server and emulate the browser or ios
+     
+```    
+    grunt serve:local (don't work anymore within the browser due to invalid param)
+    ionic run browser
+    ionic run ios   
 ```
 
 Remark : When we use the option local, feedhenry will access the backend server locally using the address passed as parameter to the url
@@ -38,10 +43,13 @@ Remark : When we use the option local, feedhenry will access the backend server 
 
 ```
     npm install
+    npm install grunt
+```    
+    
+* Run the nodejs server and emulate the browser or ios
+     
+```       
     grunt serve
 ```
 
-Remarks : 
-
-* The backend system will access the mbaas service using the address of the server defined within the `FH_SERVICE_MAP` env var & using the guid key `0123456789ABCDEFGHIJKLMN`
-* Don't forget to follow the [installation procedure](https://github.com/FuseByExample/rest-dsl-in-action#installation) of this demo in order to use the backend services.
+Remark :  Don't forget to follow the [installation procedure](https://github.com/FuseByExample/rest-dsl-in-action#installation) of this demo in order to use the backend services.
