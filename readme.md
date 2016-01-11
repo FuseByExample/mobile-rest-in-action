@@ -67,4 +67,4 @@ Remark : When we use the option local, feedhenry will access the backend server 
     grunt serve
 ```
 
-Remark :  Don't forget to follow the [installation procedure](https://github.com/FuseByExample/rest-dsl-in-action#installation) of this demo in order to use the backend services.
+Remark :  Don't forget to follow the [installation procedure here](https://github.com/FuseByExample/rest-dsl-in-action#installation) of Rest DSL in Action in order to use the backend services.
