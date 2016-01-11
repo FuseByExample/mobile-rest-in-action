@@ -51,6 +51,23 @@ Remark : The application can be started in emulation mode with IoS but not yet w
 
 Remark : When we use the option local, feedhenry will access the backend server locally using the address passed as parameter to the url
 
+* To run on Android
+
+```
+ionic emulate android
+```
+
+* In a separate terminal of the client-ionic
+
+```
+ionic run browser 
+
+and within the browser of the android browser
+
+http://10.0.2.2:8000?url=http://10.0.0.2:8001/#app/articles
+
+```
+
 ## Backend server calling the Camel REST Services
 
 * Move to the `backend-service` directory and execute these commands to install
