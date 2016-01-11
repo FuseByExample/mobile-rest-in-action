@@ -44,8 +44,7 @@ Remark : The application can be started in emulation mode with IoS but not yet w
     
 * Run the nodejs server and emulate the browser or ios
      
-```    
-    grunt serve:local (don't work anymore within the browser due to invalid param)
+```
     ionic run browser
     ionic run ios   
 ```
