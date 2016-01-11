@@ -1,0 +1,9 @@
+<ion-view view-title="Articles">
+  <ion-content>
+    <ion-list>
+        <ion-item ng-repeat="article in articles | orderBy:['user','title']" href="#/app/article/{{article.id}}">
+            {{article.title}}, posted {{article.postDate}}, by {{article.user}}
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

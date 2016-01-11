@@ -1,0 +1,27 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-header bar-positive">
+        <h1 class="title">New Article</h1>
+        <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" id="id" placeholder="Blog id" ng-model="newArticle.id">
+            </label>
+            <label class="item item-input">
+                <input type="text" id="user" placeholder="Author" ng-model="newArticle.user">
+            </label>
+            <label class="item item-input">
+                <input type="text" id="title" placeholder="Enter Your Title Here" ng-model="newArticle.title">
+            </label>
+            <label class="item item-input">
+                <input type="text" id="body" placeholder="Description of the article"
+                       ng-model="newArticle.body">
+            </label>
+            <label class="item item-input">
+                <input type="date" id="postdate" placeholder="Publication date" ng-model="newArticle.postDate">
+            </label>
+            <button class="button button-block button-positive icon-right ion-chevron-right" ng-click="addArticle(newArticle)">Add it !</button>
+        </div>
+    </ion-content>
+</ion-modal-view>

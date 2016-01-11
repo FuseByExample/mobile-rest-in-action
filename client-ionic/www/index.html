@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>JBoss Fuse &amp; Feedhenry Mobile</title>
+
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+
+    <!-- Feedhenry JS SDK -->
+    <script src="lib/feedhenry/feedhenry.js"></script>
+
+    <!-- Ionic Javascript-->
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="lib/ionic/js/angular/angular-resource.min.js"></script>
+    <script src="lib/ionic/js/angular-ui/angular-ui-router.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- Custom FH Angular Modules
+    <script src="app/modules/fhcloud.js"></script>
+    -->
+
+    <!-- Import Angular Dependencies -->
+    <script src="app/controllers.js"></script>
+    <script src="app/directives.js"></script>
+    <script src="app/services.js"></script>
+
+    <!-- Client App entry Point -->
+    <script src="app/app.js"></script>
+</head>
+
+<body ng-app="blog">
+<ion-nav-view></ion-nav-view>
+</body>
+
+</html>

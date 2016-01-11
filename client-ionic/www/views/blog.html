@@ -1,0 +1,31 @@
+<ion-pane>
+    <ion-header-bar class="header-footer-bg">
+        <div class="center">
+            <h3>Blog Application</h3>
+        </div>
+    </ion-header-bar>
+
+    <ion-content class="padding" ng-controller="MainCtrl">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" id="id" placeholder="Blog id" ng-model="article.id">
+            </label>
+            <label class="item item-input">
+                <input type="text" id="title" placeholder="Enter Your Title Here" ng-model="article.title">
+            </label>
+            <label class="itemitem-input">
+                <input type="text" id="desc" placeholder="Description's article" ng-model="article.description">
+            </label>
+            <label class="item item-input">
+                <input type="date" id="date" placeholder="Publication date" ng-model="article.date">
+            </label>
+            <button class="button button-block button-positive icon-right ion-chevron-right"
+                    ng-click="sayHello(article)">Add it !
+            </button>
+            <div class="col col-offset-10 col-80"><h3 id="greeting"><i class="icon {{textClassName}}"></i>
+                {{noticeMessage}}</h3></div>
+        </div>
+    </ion-content>
+
+    <fhfooter></fhfooter>
+</ion-pane>
