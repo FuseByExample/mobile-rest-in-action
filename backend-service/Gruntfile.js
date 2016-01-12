@@ -57,7 +57,7 @@ module.exports = function(grunt) {
            * or a remote instance.
            */
           var serviceMap = {
-            'fusekey001': 'http://127.0.0.1:8001'
+            //'fusekey001': 'http://127.0.0.1:8001'
           };
           return JSON.stringify(serviceMap);
         }
