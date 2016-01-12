@@ -55,6 +55,7 @@ Remark : When we use the option local, feedhenry will access the backend server 
 
 ```
 ionic emulate android
+ionic emulate android --target=Samsung-Galaxy-S6
 ```
 
 * In a separate terminal of the client-ionic
