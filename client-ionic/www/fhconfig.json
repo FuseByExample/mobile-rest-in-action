@@ -1,6 +1,6 @@
 {
   "appid": "fuse-mobile",
-  "appkey": "0123456789ABCDEFGHIJKLMN",
+  "appkey": "fusekey001",
   "apptitle": "My Feedhenry JBoss Fuse App",
   "connectiontag": "1.0.0",
   "host": "http://localhost:8001",
