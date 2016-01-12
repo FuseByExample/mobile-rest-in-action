@@ -6,7 +6,7 @@ blog.controller('ArticlesCtrl', function ($scope, fhcloud, $ionicModal, articleS
 
     ionic.Platform.ready(function () {
         console.log('platform ready');
-        screen.unlockOrientation();
+        // screen.unlockOrientation();
     })
 
     $scope.addArticle = function (article) {
