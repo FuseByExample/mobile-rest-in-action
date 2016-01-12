@@ -46,9 +46,18 @@ app.use(express.static(__dirname + '/public'));
 // Note: important that this is added just before your own Routes
 // app.use(mbaasExpress.fhmiddleware());
 
-app.use("/box/srv/1.1/app/init", function(req, res){
-  console.log("Got request for app init");
-  res.send(JSON.stringify(initData));
+app.get("/box/srv/1.1/app/init", function(req, res){
+  console.log("Got GET request for app init");
+  if(req.query._callback){
+    res.send(req.query._callback + "(" + JSON.stringify(initData) + ")");
+  } else {
+    res.send("no callbackId");
+  }
+});
+
+app.post("/box/srv/1.1/app/init", function(req, res){
+  console.log("Got POST request for app init");
+  res.send(initData);
 });
 
 app.get('/articles', blogService.findAll);
