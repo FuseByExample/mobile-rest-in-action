@@ -18,7 +18,9 @@
   },
   "scripts": {},
   "license": "mit",
-  "cordovaPlugins": [],
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist"
+  ],
   "cordovaPlatforms": [
     "ios",
     "android"
