@@ -85,30 +85,62 @@ grunt serve
 
 ![Local Mobile Server](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-say-local-backend.png)
 
-* Everything isin place to use now Cordova/Ionic tools to play with the iPhone/Android/Browser emulator
+* Everything is in place to use now Cordova/Ionic tools to play with the iPhone/Android/Browser emulator
 
 ## Use Ionic Mobile framework
 
-Feedhenry can be used with AngularJS & Ionic Mobile javascript frameworks. To use the ionic client & the mobile framework developed by [http://ionicframework.com/]Ionic, we must install
-the nodejs client as such :
+* To use the ionic client & the mobile framework developed by [http://ionicframework.com/]Ionic, we must install
+  the node `ionic` package globally as such :
 
 ```
 npm install -g ionic
 ```
 
-The client-cordova project has been created from the feedhenry template `quickstart-ionic-app` where next, we have changed the code `hello.js` file, added cordova `config.xml` and copy/paste
-the feedhenry.js file (version 2.10).
-
-Next, we have added the required platforms, build the code & start a local server or the ios, android emulator.
+* The Cordova Hooks represent special scripts which could be added by application and plugin developers or even by your own build system to customize cordova commands. They must be installed within the project of the client.
+* So run these commands
 
 ```
+ionic hooks add
+chmod +x hooks/
+```
+
+* Create the config.xml file need by cordova and add it within the client folder. The two most important paramaters are the id and the name
+
+```
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="org.fuse.ionic.js" android-versionCode="23" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Fuse Ionic JS App</name>
+  <description>This is simple Feedhenry Ionic JS App</description>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="permissions" value="none"/>
+  <preference name="fullscreen" value="true"/>
+  <preference name="webviewbounce" value="true"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+</widget>
+```
+
+* In order to add the cordova files required to use the HTML5 Mobile hybrid application running on IoS, Android, a Browser, we will add the required platforms using these commands
+
+```
+ionic platform add browser
 ionic platform add ios
 ionic platform add android
-ionic platform add browser
+```
 
+* We can now build the project (for a further deployment)
+
+```
 ionic build ios
 ionic build android
 ionic build browser
+```
+
+* To emulate the application running into a mobile browser, run this command within the `client` project
+
+```
+ionic run browser
 ```
 
 * To emulate IoS or Android
@@ -125,7 +157,6 @@ or launch genymotion client manually and next the Samsung VB
 ionic run android
 ionic run ios
 ```
-
 
 *******************
 
