@@ -1,5 +1,33 @@
 # Develomment of the project
 
+## Create Ionic project on openshift.feedhenry.com
+
+* Log to openshift.feedhenry.com and click on the button to create a new project
+
+* Select from the template list the `IONIC HELLO WORLD PROJECT` and click in the button `choose`
+ 
+* Add your project name `demo-mobile` like also the name of the client and application
+ 
+* Click on the button `create`
+
+![Create Ionic Mobile Application](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-create.png)
+
+* On your machine, open a terminal and create a folder with the name of your project `demo-mobile`
+ 
+* Create 2 sub folders; ne for the `client` and the other for the `app`
+ 
+* Open another terminal and move in each terminal to the `client` folder and `app` folder 
+ 
+* When the project has been created on openshift.feedhenry.com, copy/paste the git url and clone respectively the client and the application
+
+![Git repositories](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-gits.png)
+
+```
+git clone git@git.openshift.feedhenry.com:fuse/demo-app.git app
+git clone git@git.openshift.feedhenry.com:fuse/demo-client.git client
+``` 
+* Select the `Cloud App` of the `demo` project on the openshift.feedhenry.com web site and click on the `cloud` icon to start the deployment process of the nodejs application
+
 ## Use Cordova client
 
 To use the Cordova technology in order to wrap our code to run a Hybrid Mobile solution that we can emaulate or run on IOS or Android, the following modifications
