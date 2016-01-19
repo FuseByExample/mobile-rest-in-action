@@ -104,7 +104,7 @@ ionic hooks add
 chmod +x hooks/
 ```
 
-* Create the config.xml file need by cordova and add it within the client folder. The two most important paramaters are the id and the name
+* Create the config.xml file needed by cordova and add it within the client folder. The two most important parameters are the id and the name
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -143,7 +143,15 @@ ionic build browser
 ionic run browser
 ```
 
-* To emulate IoS or Android
+![Local Mobile Server](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-ionic-say-hello.png)
+
+* To run the iOS emulator, use this command
+
+```
+ionic run ios
+```
+
+* To emulate Android
 
 For the reason explained within the ionic documentation, we have installed `genymotion` and create a VM machine in Virtualbox to emulate `Google Nexus 10`
 
@@ -155,7 +163,6 @@ VBoxManage startvm gui {38ec0571-d491-4a68-aea6-a67749e89ff1}
 or launch genymotion client manually and next the Samsung VB
 
 ionic run android
-ionic run ios
 ```
 
 *******************
@@ -163,27 +170,6 @@ ionic run ios
 
 
 ## Use Cordova client
-
-To use the Cordova technology in order to wrap our code to run a Hybrid Mobile solution that we can emaulate or run on IOS or Android, the following modifications
-have been done to the project
-
-* Add a config.xml file containing the info about the cordova project within directory client-cordova` & `client-ionic`
-
-```
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="%id%" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>%appname%</name>
-    <description>
-        This is simple JS App, built using Cordova
-    </description>
-    <content src="index.html" />
-    <access origin="*" />
-    <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
-</widget>
-```
-
-Replace %id% with a package name (e.g. : org.fuse.feedhenry.js) and %appname% with the name of the application (e.g. : Fuse Feedhenry JS App)
 
 * Next install globally cordova & grunt-cordovacli (opional)
 
