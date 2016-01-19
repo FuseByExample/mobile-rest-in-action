@@ -10,7 +10,34 @@ developed [here](https://github.com/FuseByExample/rest-dsl-in-action).
 
 | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-1.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-2.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-3.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-4.png" width="200"/>  |
 
-To run the project on Android, please use the code modified and pushed to the branch `Android`
+To access the backend from the `backend-service` nodejs application, new express routes have been added
+
+```
+app.get('/articles', blogService.findAll);
+app.get('/articles/searchid/:id', blogService.findById);
+app.get('/articles/searchuser/:user', blogService.findByUser)
+app.post('/articles', blogService.newPost);
+```
+
+Each route is associated to a function that the server will use to call the Camel REST endpoint running into JBoss Fuse. By example, the SearchById function has been created as such
+
+```
+exports.findById = function (req, res, next) {
+    console.log("Service FindById called");    
+    var id = req.params.id;
+    request('http://localhost:9191/blog/article/search/id/' + id, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log(body);
+            res.send(body);
+        }
+    })
+};
+```
+
+The parameter that we need to use is retrieved using the javascript req.params.id function and next added within the url request `http://localhost:9191/blog/article/search/id/' + id`. When the response is received, it is returned
+back using the response object.
+
+Remark : To run the project on Android, please use the code modified and pushed to the branch `Android`
 
 # Prerequisites
 
