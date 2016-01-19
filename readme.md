@@ -222,7 +222,7 @@ ionic emulate android
  
 ```
 ionic emulate --target=Samsung-Galaxy-S6
-``  
+```  
 
 * To access the application using the browser of the device, use this command
 
