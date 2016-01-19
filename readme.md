@@ -1,7 +1,11 @@
 # Feedhenry Mobile & JBoss Fuse Service
 
-The purpose of this demo is to develop a Mobile Application using the Ionic, Feedhenry & Cordova Hybrid HTML5 Frameworks. The project will be developed in 2 parts; the first part will explain how to setup the project using 
-the `openshift.feedhenry.com` cloud portal and run it locally on your machine while the second part will use the code part of this github repository to call the backend REST services designed for the JBoss Fuse Blog application
+The purpose of this demo is to develop a Mobile Application using the Ionic, Feedhenry & Cordova Hybrid HTML5 Frameworks.
+
+The project will be developed in 2 parts:
+
+* The first part will explain how to setup the project using the `openshift.feedhenry.com` cloud portal and run it locally on your machine while 
+* The second part will use the code part of this github repository to call the backend REST services designed for the JBoss Fuse Blog application
 developed [here](https://github.com/FuseByExample/rest-dsl-in-action).
 
 | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-1.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-2.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-3.png" width="200"/>  | <img src="https://github.com/cmoulliard/feedhenry-camel/blob/master/images/mobile-camel-4.png" width="200"/>  |
