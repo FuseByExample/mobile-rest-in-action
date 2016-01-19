@@ -57,10 +57,78 @@ grunt:serve
 
 * Add your name within the field and click on the button `Say hello from the cloud`
 
-* You will receive a reponse from the nodejs server running in the cloud
+* You will receive a response from the nodejs server running in the cloud
 
 ![Local Mobile Server](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-local-say-hello.png)
  
+* You can also make a test using your local backend server which is a nodejs application
+
+* Within the client terminal, stop the grunt task and relaunch using using the local parameter
+ 
+```
+grunt serve:local
+``` 
+
+* The url displayed into the browser is different as it contains the hostname of the local backend server to call
+
+```
+http://localhost:9002/?url=http://localhost:8001#/
+```
+
+* Within the project `application` of the second terminal, launch the backend server using this grunt task
+
+```
+grunt serve
+```
+
+* Say hello using now your local backend server
+
+![Local Mobile Server](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-say-local-backend.png)
+
+* Everything isin place to use now Cordova/Ionic tools to play with the iPhone/Android/Browser emulator
+
+## Use Ionic Mobile framework
+
+Feedhenry can be used with AngularJS & Ionic Mobile javascript frameworks. To use the ionic client & the mobile framework developed by [http://ionicframework.com/]Ionic, we must install
+the nodejs client as such :
+
+```
+npm install -g ionic
+```
+
+The client-cordova project has been created from the feedhenry template `quickstart-ionic-app` where next, we have changed the code `hello.js` file, added cordova `config.xml` and copy/paste
+the feedhenry.js file (version 2.10).
+
+Next, we have added the required platforms, build the code & start a local server or the ios, android emulator.
+
+```
+ionic platform add ios
+ionic platform add android
+ionic platform add browser
+
+ionic build ios
+ionic build android
+ionic build browser
+```
+
+* To emulate IoS or Android
+
+For the reason explained within the ionic documentation, we have installed `genymotion` and create a VM machine in Virtualbox to emulate `Google Nexus 10`
+
+```
+We launch the Samsung Galaxy VM Box
+VBoxManage list vms
+VBoxManage startvm gui {38ec0571-d491-4a68-aea6-a67749e89ff1}
+
+or launch genymotion client manually and next the Samsung VB
+
+ionic run android
+ionic run ios
+```
+
+
+*******************
+
 
 
 ## Use Cordova client
