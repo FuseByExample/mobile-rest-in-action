@@ -211,14 +211,20 @@ ionic build ios
 ionic build browser
 ```
 
-* To run on Android
+* To use and emulate Android locally on your machine. Use the branch `android` and install the node packages or grunt as done previously for the client-ionic and backend-service
+* Next, run these commands within the client-ionic direcrory within a terminal
 
 ```
+ionic platform add android
 ionic emulate android
-ionic emulate android --target=Samsung-Galaxy-S6
 ```
+* You can create a customized device using `android adv` manager to by example use the Samsung S6 Galaxy Smartphone and next specify it to the emulator
+ 
+```
+ionic emulate --target=Samsung-Galaxy-S6
+``  
 
-* In a separate terminal of the client-ionic
+* To access the application using the browser of the device, use this command
 
 ```
 ionic run browser 
