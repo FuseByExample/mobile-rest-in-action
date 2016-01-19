@@ -1,4 +1,4 @@
-# Develomment of the project
+# Development of the project
 
 ## Create Ionic project on openshift.feedhenry.com
 
