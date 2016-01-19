@@ -1,4 +1,4 @@
-# Feedhenry Mobile & JBoss Fuse Service
+# RedHat Mobile Application & JBoss Fuse Service
 
 The purpose of this demo is to develop a Mobile Application using the Ionic, Feedhenry & Cordova Hybrid HTML5 Frameworks.
 
