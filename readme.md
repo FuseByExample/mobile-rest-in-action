@@ -19,7 +19,7 @@ app.get('/articles/searchuser/:user', blogService.findByUser)
 app.post('/articles', blogService.newPost);
 ```
 
-Each route is associated to a function that the server will use to call the Camel REST endpoint running into JBoss Fuse. By example, the SearchById function has been created as such
+Each route is associated to a function that the server will use to call the Camel REST endpoint running into JBoss Fuse. By example, the `findById` function has been created as such
 
 ```
 exports.findById = function (req, res, next) {
@@ -34,7 +34,7 @@ exports.findById = function (req, res, next) {
 };
 ```
 
-The parameter that we need to use is retrieved using the javascript req.params.id function and next added within the url request `http://localhost:9191/blog/article/search/id/' + id`. When the response is received, it is returned
+The parameter that we need to use is retrieved using the javascript `req.params.id` function and next added within the url request `http://localhost:9191/blog/article/search/id/' + id`. When the response is received, it is returned
 back using the response object.
 
 Remark : To run the project on Android, please use the code modified and pushed to the branch `Android`
