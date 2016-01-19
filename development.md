@@ -28,6 +28,10 @@ git clone git@git.openshift.feedhenry.com:fuse/demo-client.git client
 ``` 
 * Select the `Cloud App` of the `demo` project on the openshift.feedhenry.com web site and click on the `cloud` icon to start the deployment process of the nodejs application
 
+![Create Ionic Mobile Application](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-deploy.png)
+
+
+
 ## Use Cordova client
 
 To use the Cordova technology in order to wrap our code to run a Hybrid Mobile solution that we can emaulate or run on IOS or Android, the following modifications
