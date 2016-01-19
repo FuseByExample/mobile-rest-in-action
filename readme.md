@@ -4,7 +4,7 @@ The purpose of this demo is to develop a Mobile Application using the Ionic, Fee
 
 The project will be developed in 2 parts:
 
-* The first part will explain how to setup the project using the `openshift.feedhenry.com` cloud portal and run it locally on your machine while 
+* The first part will explain how to setup the project using the `openshift.feedhenry.com` cloud portal and run it locally on your machine 
 * The second part will use the code part of this github repository to call the backend REST services designed for the JBoss Fuse Blog application
 developed [here](https://github.com/FuseByExample/rest-dsl-in-action).
 
@@ -182,32 +182,34 @@ ionic run ios
 ## Mobile client
 
 * Move to the `client-ionic` directory and execute these commands
+
+```
+npm install
+```
 * Add the Cordova platform specific config files
     
 ```   
-    rm -rf resources/
-    rm -rf plugins
-    rm -rf platforms/
-    ionic hooks add
-    ionic platform add ios
-    ionic platform add browser
+rm -rf resources/
+rm -rf plugins
+rm -rf platforms/
+ionic hooks add
+ionic platform add ios
+ionic platform add browser
 ```
     
-* Build HTML5 Mobile hybrid code 
-    
-```    
-    ionic build ios
-    ionic build browser
-```
-    
-* Run the nodejs server and emulate the browser or ios
+* Run the client using as target platform the browser or the iPhone
      
 ```
-    ionic run browser
-    ionic run ios   
+ionic run browser
+ionic run ios   
 ```
 
-Remark : When we use the option local, feedhenry will access the backend server locally using the address passed as parameter to the url
+* Build HTML5 Mobile hybrid code (optional- only required to deploy on a smartphone)
+    
+```    
+ionic build ios
+ionic build browser
+```
 
 * To run on Android
 
