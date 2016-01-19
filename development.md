@@ -167,8 +167,6 @@ ionic run android
 
 *******************
 
-
-
 ## Use Cordova client
 
 * Next install globally cordova & grunt-cordovacli (opional)
