@@ -12,24 +12,55 @@
 
 ![Create Ionic Mobile Application](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-create.png)
 
-* On your machine, open a terminal and create a folder with the name of your project `demo-mobile`
- 
-* Create 2 sub folders; ne for the `client` and the other for the `app`
- 
-* Open another terminal and move in each terminal to the `client` folder and `app` folder 
- 
-* When the project has been created on openshift.feedhenry.com, copy/paste the git url and clone respectively the client and the application
-
-![Git repositories](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-gits.png)
-
-```
-git clone git@git.openshift.feedhenry.com:fuse/demo-app.git app
-git clone git@git.openshift.feedhenry.com:fuse/demo-client.git client
-``` 
-* Select the `Cloud App` of the `demo` project on the openshift.feedhenry.com web site and click on the `cloud` icon to start the deployment process of the nodejs application
+* Select the `Cloud App` of the `demo-mobile` project on the openshift.feedhenry.com web site and click on the `cloud` icon to start the deployment process of the nodejs application
 
 ![Create Ionic Mobile Application](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-deploy.png)
 
+* On your machine, open a terminal and create a folder with the name of your project `demo-mobile`
+   
+* When the project has been created on openshift.feedhenry.com, copy/paste the git urls
+
+![Git repositories](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-gits.png)
+
+* And clone the mobile client and the backend application using the `git clone` command as such
+
+```
+git clone git@git.openshift.feedhenry.com:fuse/demo-mobile-client.git client
+git clone git@git.openshift.feedhenry.com:fuse/demo-mobile-app.git application
+``` 
+
+* Move to the folder `client` and deploy the node packages
+
+```
+npm install
+```
+
+* Open another terminal and move to the `application` folder
+* Deploy too the node packages and grunt 
+
+```
+npm install
+npm install grunt
+``` 
+ 
+* If the `Cloud Application` has been deployed successfully and is started, 
+
+![Cloud Server started](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-cloud-server-started.png)
+
+* You can start locally on your machine the mobile application using the `grunt:serve` task that you will execute within the `client` project
+
+```
+grunt:serve
+```
+
+* Your browser will be called and this address will appear `http://localhost:9002/#`
+
+* Add your name within the field and click on the button `Say hello from the cloud`
+
+* You will receive a reponse from the nodejs server running in the cloud
+
+![Local Mobile Server](https://raw.githubusercontent.com/FuseByExample/mobile-rest-in-action/master/images/mobile-local-say-hello.png)
+ 
 
 
 ## Use Cordova client
