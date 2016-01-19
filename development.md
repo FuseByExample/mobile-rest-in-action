@@ -2,11 +2,11 @@
 
 ## Create Ionic project on openshift.feedhenry.com
 
-* Log to openshift.feedhenry.com and click on the button to create a new project
+* Log to *openshift.feedhenry.com* web site and click on the button to create a new project
 
-* Select from the template list the `IONIC HELLO WORLD PROJECT` and click in the button `choose`
+* Select from the template list the `IONIC HELLO WORLD PROJECT` and click on the button `choose`
  
-* Add your project name `demo-mobile` like also the name of the client and application
+* Add your project name `demo-mobile` like also the name of the `client` and `application`
  
 * Click on the button `create`
 
