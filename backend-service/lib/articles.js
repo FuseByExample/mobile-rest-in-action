@@ -1,11 +1,13 @@
 var articles = [];
 
 var request = require('request')
+var hostES = "localhost:9200";
+var hostRest = "localhost:8183/camel-rest";
 //require('request-debug')(request);
 
 exports.findAll = function (req, res, next) {
     console.log("Service Find All called");
-    request('http://localhost:9200/blog/_search?pretty=true&q=*:*&size=50', function (error, response, body) {
+    request('http://' + hostES + '/blog/_search?pretty=true&q=*:*&size=50', function (error, response, body) {
         if (!error && response.statusCode == 200) {
             var jsonData = JSON.parse(body);
             var result = [];
@@ -22,7 +24,7 @@ exports.findAll = function (req, res, next) {
 exports.findById = function (req, res, next) {
     console.log("Service FindById called");    
     var id = req.params.id;
-    request('http://localhost:9191/blog/article/search/id/' + id, function (error, response, body) {
+    request('http://' + hostRest + '/blog/article/search/id/' + id, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             console.log(body);
             res.send(body);
@@ -33,7 +35,7 @@ exports.findById = function (req, res, next) {
 exports.findByUser = function(req, res, next) {
     console.log("Service FindByUser called");
     var user = req.params.user;
-    request('http://localhost:9191/blog/article/search/user/' + user, function (error, response, body) {
+    request('http://' + hostRest + '/blog/article/search/user/' + user, function (error, response, body) {
         if (!error && response.statusCode == 200) {
             console.log(body);
             res.send(body);
@@ -47,7 +49,7 @@ exports.newPost = function (req, res) {
     var articleCleaned = '{"id":"' + article.id + '","user":"' + article.user + '","title":"' + article.title + '","body":"' + article.body + '","postDate":"' + article.postDate + '"}';
     console.log(articleCleaned);
     request({method: "PUT",
-             uri: 'http://localhost:9191/blog/article',
+             uri: 'http://' + hostRest + '/blog/article',
              json: true,
              body: articleCleaned}, function (error, response, body) {
         if (!error && response.statusCode == 200) {
